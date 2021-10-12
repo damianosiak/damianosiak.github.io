@@ -607,6 +607,8 @@ function showAllAddedLocationsList(){
 		//alert("hej");
 		//TUTAJ UKRYC LOADING PANEL
 		document.getElementById("loadingPanelForListOfAllPoints").style.display="none";
+		document.getElementById("loadingPanelForListOfAllPoints_progressValue").style.width=0;
+		document.getElementById("loadingPanelForListOfAllPoints_progress").setAttribute("data-label","% Complete");
 		showAllAddedLocationsList2();
 	},(points.length*250)+250);
 	//showAllAddedLocationsList2();
