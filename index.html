@@ -603,6 +603,7 @@ function showAllAddedLocationsList(){
 	if(selectedLocationsAddressesArray.length==points){
 		showAllAddedLocationsList2();
 	}else{
+		selectedLocationsAddressesArray=[];
 		for(var i=1;i<=points.length;i++){
 			setTimeoutForShowAllAddedLocationsList(i,k);
 		}
