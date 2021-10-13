@@ -600,18 +600,22 @@ function showAllAddedLocationsList(){
 	selectedLocationsAddressesArray=[];
 	document.getElementById("allAddedLocationsPanelTable").innerHTML="<tr><th>Location mark</th><th>Full ocation address</th><th>Delete</th></tr>";
 	var k=points.length;
-	for(var i=1;i<=points.length;i++){
-		setTimeoutForShowAllAddedLocationsList(i,k);
-	}
-	setTimeout(function(){
-		//alert("hej");
-		//TUTAJ UKRYC LOADING PANEL
-		document.getElementById("loadingPanelForListOfAllPoints").style.display="none";
-		document.getElementById("loadingPanelForListOfAllPoints_progressValue").style.width=0;
-		document.getElementById("loadingPanelForListOfAllPoints_progress").setAttribute("data-label","0% Complete");
+	if(selectedLocationsAddressesArray.length==points){
 		showAllAddedLocationsList2();
-	},(points.length*250)+250);
-	//showAllAddedLocationsList2();
+	}else{
+		for(var i=1;i<=points.length;i++){
+			setTimeoutForShowAllAddedLocationsList(i,k);
+		}
+		setTimeout(function(){
+			//alert("hej");
+			//TUTAJ UKRYC LOADING PANEL
+			document.getElementById("loadingPanelForListOfAllPoints").style.display="none";
+			document.getElementById("loadingPanelForListOfAllPoints_progressValue").style.width=0;
+			document.getElementById("loadingPanelForListOfAllPoints_progress").setAttribute("data-label","0% Complete");
+			showAllAddedLocationsList2();
+		},(points.length*250)+250);
+		//showAllAddedLocationsList2();
+	}
 }
 
 
