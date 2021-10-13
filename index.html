@@ -617,7 +617,7 @@ function estimateTimeCounterTimeout(i,iterations,waittime,divid){
 	setTimeout(function(){
 		//alert(i);
 		//alert(iterations);
-		var estimateTimeSeconds=Math.round(((iterations-i)*waittime)/1000);
+		var estimateTimeSeconds=Math.ceil(((iterations-i)*waittime)/1000);
 		//alert(estimateTimeSeconds);
 		var estimateTime="";
 		if(estimateTimeSeconds>=60){
