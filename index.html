@@ -944,14 +944,16 @@ function permut(string) {
 	}	
 	
     function calcRoute() {
-		var combinationsAmmount=0;
-		if(points.length===0 || points.length===1){
-			combinationsAmmount=1;
+		var combinationsAmmount=points.length;
+		if(combinationsAmmount===0 || combinationsAmmount===1){
+			//console.log(1);
+			combinationsAmmount=0;
 		}else{
-			for (var i=points.length-1; i>=1; i--){
-				combinationsAmmount=combinationsAmmount*i;
+			for (var i=combinationsAmmount-1; i>=1; i--) {
+				combinationsAmmount *= i;
 			}
 		}
+		//console.log(combinationsAmmount);
 		//var combinationsAmmount=points.length
 		//estimateTimeCounter(points.length,1000,"estimatedTime");
 		estimateTimeCounter(combinationsAmmount,1000,"estimatedTime");
