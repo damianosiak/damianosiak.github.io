@@ -944,7 +944,7 @@ function permut(string) {
 	}	
 	
     function calcRoute() {
-		var combinationsAmmount=points.length;
+		/*var combinationsAmmount=points.length;
 		if(combinationsAmmount===0 || combinationsAmmount===1){
 			//console.log(1);
 			combinationsAmmount=0;
@@ -952,11 +952,11 @@ function permut(string) {
 			for (var i=combinationsAmmount-1; i>=1; i--) {
 				combinationsAmmount *= i;
 			}
-		}
+		}*/
 		//console.log(combinationsAmmount);
 		//var combinationsAmmount=points.length
 		//estimateTimeCounter(points.length,1000,"estimatedTime");
-		estimateTimeCounter(combinationsAmmount,1000,"estimatedTime");
+		//estimateTimeCounter(combinationsAmmount,1000,"estimatedTime");
 	
 		var start=new google.maps.LatLng(points[0][0],points[0][1]);
 		var end=new google.maps.LatLng(points[points.length-1][0],points[points.length-1][1]); 
@@ -985,7 +985,7 @@ function permut(string) {
 	  console.log("TO");
 	  console.log(allWaypointsCombinations);
 	  
-	  
+	  var combinationsAmmountForTime=allWaypointsCombinations.length;
 	  for(var i=0; i<allWaypointsCombinations.length; i++){
 		var tempDirections=[];
 		for(var y=0; y<allWaypointsCombinations[i].length; y++){
@@ -1000,6 +1000,7 @@ function permut(string) {
 		directionsArray.push(tempDirections);
 	  }
 	  
+	  estimateTimeCounter(combinationsAmmountForTime,1000,"estimatedTime");
 	  console.log("DirectionsArray:");
 	  console.log(directionsArray);
 	  
