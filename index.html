@@ -1017,7 +1017,7 @@ function permut(string) {
 			finishCalculation(i,directionsArray.length);
 		}
 	  }
-	  
+    }
 	  
 	  function calculate(i,k){
 		setTimeout(function(){
@@ -1163,8 +1163,6 @@ function permut(string) {
 			document.getElementById("progress").setAttribute("data-label",percentRounded+"% Complete");
 			document.getElementById("loadingPanel").style.display="none";
 		},1000*i);
-		directionsArray=[];
-		distancesArray=[];
 	  }
 	  
 	  
