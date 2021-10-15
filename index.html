@@ -950,11 +950,7 @@ function permut(string) {
 	document.getElementById("result_EndLocation").innerHTML="&#160;";
 	document.getElementById("result_Distance").innerHTML="&#160;";
 	document.getElementById("result_Duration").innerHTML="&#160;";
-	document.getElementById("detailedResult_StartLocation").innerHTML="&#160;";
-	document.getElementById("detailedResult_EndLocation").innerHTML="&#160;";
-	document.getElementById("detailedResult_Distance").innerHTML="&#160;";
-	document.getElementById("detailedResult_Duration").innerHTML="&#160;";
-	document.getElementById("detailsTable").innerHTML+="";
+	document.getElementById("detailsTable").innerHTML="<tr><th rowspan='2'>Summary</th><th>Start location</th><th>End location</th><th>Distance</th><th>Duration</th></tr><tr><td id='detailedResult_StartLocation'>&#160;</td><td id='detailedResult_EndLocation'>&#160;</td><td id='detailedResult_Distance'>&#160;</td><td id='detailedResult_Duration'>&#160;</td></tr><tr><td colspan='5'>&#160;</td></tr><tr id='tableDetailsHeader'><th>Route part</th><th>Start location</th><th>End location</th><th>Distance</th><th>Duration</th></tr>";
 
 		/*var combinationsAmmount=points.length;
 		if(combinationsAmmount===0 || combinationsAmmount===1){
