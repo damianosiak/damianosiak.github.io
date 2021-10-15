@@ -668,6 +668,7 @@ function showAllAddedLocationsList(){
 		document.getElementById("loadingPanelForListOfAllPoints").style.display="none";
 		showAllAddedLocationsList2();
 	}else{
+		selectedLocationsAddressesArray=[];
 		estimateTimeCounter(points.length,250,"loadingPanelForListOfAllPoints_estimatedTime");
 		for(var i=1;i<=points.length;i++){
 			setTimeoutForShowAllAddedLocationsList(i,k);
