@@ -719,12 +719,14 @@ function deletePointFromList(i){
 		}
 	}
 	
-	document.getElementById("allAddedLocationsPanelTable").innerHTML="<tr><th>Location mark</th><th>Full ocation address</th><th>Delete</th></tr>";
+	//document.getElementById("allAddedLocationsPanelTable").innerHTML="<tr><th>Location mark</th><th>Full ocation address</th><th>Delete</th></tr>";
+	var tempStringWithTr="<tr><th>Location mark</th><th>Full ocation address</th><th>Delete</th></tr>";
 	for(var y=0;y<selectedLocationsAddressesArray.length;y++){
-		document.getElementById("allAddedLocationsPanelTable").innerHTML+="<tr><td>"+y+"</td><td>"+selectedLocationsAddressesArray[y]+"</td><td style='text-align:center'><button type='button' class='btn btn-danger' style='width:50%' onClick='deletePointFromList("+y+");'>X</div></td></tr>";
+		tempStringWithTr+="<tr><td>"+y+"</td><td>"+selectedLocationsAddressesArray[y]+"</td><td style='text-align:center'><button type='button' class='btn btn-danger' style='width:50%' onClick='deletePointFromList("+y+");'>X</div></td></tr>";
+		//document.getElementById("allAddedLocationsPanelTable").innerHTML+="<tr><td>"+y+"</td><td>"+selectedLocationsAddressesArray[y]+"</td><td style='text-align:center'><button type='button' class='btn btn-danger' style='width:50%' onClick='deletePointFromList("+y+");'>X</div></td></tr>";
 		//alert(selectedLocationsAddressesArray[i]);
 	}
-		
+	document.getElementById("allAddedLocationsPanelTable").innerHTML=tempStringWithTr;
 	//resetMap();
 	//initialize();
 	var tempPointsLenght=points.length;
