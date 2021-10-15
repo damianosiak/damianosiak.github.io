@@ -1058,6 +1058,19 @@ function permut(string) {
 			var indexOfThrBestRoute=distancesArray.indexOf(Math.min.apply(null,distancesArray));
 			//alert(indexOfThrBestRoute);
 			
+			
+			//oczyszczanie tabel przed kolejnym liczeniem
+			document.getElementById("result_StartLocation").innerHTML="";
+			document.getElementById("result_EndLocation").innerHTML="";
+			document.getElementById("result_Distance").innerHTML="";
+			document.getElementById("result_Duration").innerHTML="";
+			document.getElementById("detailedResult_StartLocation").innerHTML="";
+			document.getElementById("detailedResult_EndLocation").innerHTML="";
+			document.getElementById("detailedResult_Distance").innerHTML="";
+			document.getElementById("detailedResult_Duration").innerHTML="";
+			document.getElementById("detailsTable").innerHTML="";
+			//koniec oczyszczania tabel przed kolejnym liczeniem
+			
 			var bounds = new google.maps.LatLngBounds();
 			bounds.extend(start);
 			bounds.extend(end);
