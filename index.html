@@ -703,13 +703,22 @@ function setTimeoutForShowAllAddedLocationsList(i,k){
 function deletePointFromList(i){
 	//alert("Do you want to delete point "+i+"?");
 	var tempArray=points;
+	var tempSelectedLocationsAddressesArray=selectedLocationsAddressesArray;
 	labelIndex=0;
 	points=[];
+	selectedLocationsAddressesArray=[];
 	for(var y=0;y<tempArray.length;y++){
 		if(y!=i){
 			points.push(tempArray[y]);
 		}
 	}
+	
+	for(var y=0;y<tempSelectedLocationsAddressesArray; y++){
+		if(y!=i){
+			selectedLocationsAddressesArray.push(tempSelectedLocationsAddressesArray[y])
+		}
+	}
+		
 	//resetMap();
 	//initialize();
 	var tempPointsLenght=points.length;
