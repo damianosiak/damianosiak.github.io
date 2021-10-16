@@ -1228,7 +1228,8 @@ function permut(string) {
 			var gmap_origin=""+start.lat()+","+start.lng()+"";
 			console.log("GMAPSTART:");
 			console.log(gmap_origin);
-			var gmap_destination=end;
+			var gmap_destination=""+end.lat()+","+end.lng()+"";
+			console.log("GMAPEND:");
 			var gmap_waypoints=directionsArray[indexOfThrBestRoute];
 			var gmap_travelmode;
 			//koniec dla googleapis
