@@ -623,6 +623,7 @@ body,
 		<!--<button type="button" class="actionButton btn btn-primary" onClick="saveAsPDF();">Save as a PDF</button>
 		<button type="button" class="actionButton btn btn-primary" onClick="shareViaEmail();">Share via e-mail</button>
 		<button type="button" class="actionButton btn btn-primary">Print</button>-->
+		<button type="button" class="actionButton btn btn-primary" id="gmap_btn">Open in Google Maps</button>
 		<button type="button" class="actionButton btn btn-primary" onClick="saveAsPDF();">Print / Save as a PDF</button>
 	</div>
 </div>
@@ -1382,6 +1383,7 @@ function permut(string) {
 					//alert("no i no");
 				}
 			});
+			document.getElementById("gmap_btn").addEventListener('click',function(){window.open(gmap_url);});
 			var percent=""+(((i+1)*100)/k)+"%";
 			var percentRounded=Math.round((((i+1)*100)/k));
 			document.getElementById("progressValue").style.width=percent;
