@@ -1225,7 +1225,7 @@ function permut(string) {
 			
 			//dla googlemaps
 			var gmap_bestRouteIndex=indexOfThrBestRoute;
-			var gmap_origin=start;
+			var gmap_origin=""+start.lat()+","+start.lng()+"";
 			console.log("GMAPSTART:");
 			console.log(gmap_origin);
 			var gmap_destination=end;
